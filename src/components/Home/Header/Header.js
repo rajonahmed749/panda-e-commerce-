@@ -10,7 +10,7 @@ const Header = () => {
                     <h1>Smart Shoes, <br /> Trending shoes <br /> Are Here</h1>
                     <p className="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing  <br /> them satisfied with growing their business</p>
                     <Button variant="success" className="mt-2 rounded-pill">Let's Shopping</Button>
-                    <Button variant="link" className="ml-3 mt-2 rounded-pill">Watch Video</Button>
+                    <Button variant="link" className="ml-3 mt-2 rounded-pill">Watch Demo</Button>
                 </Col>
                 <Col xs={6} md={4}>
                     <Image src={shoe} fluid />
