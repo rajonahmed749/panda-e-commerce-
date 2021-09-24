@@ -23,13 +23,13 @@ const Footer = () => {
         { name: "About Us" },
         { name: "Features" },
         { name: "News" },
-        { name: "Career" }
+        { name: "Jobs" }
     ]
     const logo = <img src={footerLogo} alt="logo" />
     return (
         <footer className="footer-area clear-both">
             <div className="container pt-5">
-                <div className="row py-5">
+                <div className="row py-5 text-center">
                     <FooterCol key={1} menuTitle={logo} menuItems={noNamed} />
                     <FooterCol key={2} menuTitle="About US" menuItems={about} />
                     <FooterCol key={3} menuTitle="Store" menuItems={company} />

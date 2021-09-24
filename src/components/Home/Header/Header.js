@@ -1,15 +1,15 @@
 import React from 'react';
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
 import shoe from "../../../images/red-shoe.png"
-import "./Header.css"
+
 const Header = () => {
     return (
         <Container>
-            <Row>
-                <Col xs={12} md={8}>
-                    <h1>Smart Ideas <br /> For Your  Brand <br /> Are Here</h1>
-                    <p className="text-secondary">Our motto is to fulfill customer demand by making <br /> them satisfied with growing their business</p>
-                    <Button variant="success" className="mt-2 rounded-pill">Get Started</Button>
+            <Row className="justify-content-md-center mt-5">
+                <Col xs={12} md={5}>
+                    <h1>Smart Shoes, <br /> Trending shoes <br /> Are Here</h1>
+                    <p className="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing  <br /> them satisfied with growing their business</p>
+                    <Button variant="success" className="mt-2 rounded-pill">Let's Shopping</Button>
                     <Button variant="link" className="ml-3 mt-2 rounded-pill">Watch Video</Button>
                 </Col>
                 <Col xs={6} md={4}>
