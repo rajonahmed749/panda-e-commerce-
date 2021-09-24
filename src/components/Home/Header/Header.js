@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button, Image } from 'react-bootstrap';
-import shoe from "../../../images/red-shoe.png"
+import jordan from "../../../images/jorder-nike.jpg"
 
 const Header = () => {
     return (
@@ -13,7 +13,7 @@ const Header = () => {
                     <Button variant="link" className="ml-3 mt-2 rounded-pill">Watch Demo</Button>
                 </Col>
                 <Col xs={6} md={4}>
-                    <Image src={shoe} fluid />
+                    <Image className="mt-5" src={jordan} fluid />
                 </Col>
             </Row>
         </Container>

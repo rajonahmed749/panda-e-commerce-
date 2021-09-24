@@ -1,21 +1,26 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Container, Navbar, Nav } from 'react-bootstrap';
 import logo from "../../../images/logo.png";
 import "./Navbar.css"
+import { Link, useHistory } from "react-router-dom";
+
 const Menubar = () => {
+    let history = useHistory();
     return (
-        <Navbar  expand="lg" >
-            <img src={logo} alt="website-logo" id="logo" className="ml-5" />
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="m-auto">
-                    <Nav.Link href="#home" className="mr-4">Home</Nav.Link>
-                    <Nav.Link href="#features" className="mr-4">About</Nav.Link>
-                    <Nav.Link href="#pricing" className="mr-4">Products</Nav.Link>
-                    <Nav.Link href="#contact" className="mr-4">Admin</Nav.Link>
-                </Nav>
-            </Navbar.Collapse>
-        </Navbar>
+        <Container>
+            <Navbar expand="lg" >
+                <img src={logo} alt="website-logo" id="logo" className="ml-5" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="m-auto">
+                        <Nav.Link className="mr-4" onClick={() => history.push("/")}>Home</Nav.Link>
+                        <Nav.Link className="mr-4">About</Nav.Link>
+                        <Nav.Link href="#pricing" className="mr-4">Products</Nav.Link>
+                        <Nav.Link href="#contact" className="mr-4" onClick={() => history.push("/admin")}>Admin</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+        </Container>
     );
 };
 
