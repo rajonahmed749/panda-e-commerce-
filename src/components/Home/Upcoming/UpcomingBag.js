@@ -6,7 +6,7 @@ const UpcomingBag = ({ bag }) => {
     const [show, setShow] = useState(false);
     return (
         <Col xs={12} md={4} className="text-center">
-            <Card style={{ width: '19rem' }} className="rounded">
+            <Card style={{ width: '19rem' }} className="rounded mx-auto">
                 <Card.Img variant="top" src={bag.picture} />
                 <Card.Body>
                     <Card.Title>{bag.headline}</Card.Title>

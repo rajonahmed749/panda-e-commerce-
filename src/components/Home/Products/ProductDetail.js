@@ -24,7 +24,7 @@ const ProductDetail = ({ shoe }) => {
 
     return (
         <Col xs={12} md={4}>
-            <div className="service shadow">
+            <div className="shoe-card shadow">
                 <img className="IMG mb-2" src={shoe.picture} alt="shoe" />
                 <h5 >{shoe.title}</h5>
                 <p>{shoe.description}</p>
