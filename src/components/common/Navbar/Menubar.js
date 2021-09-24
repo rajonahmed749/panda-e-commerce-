@@ -4,7 +4,7 @@ import logo from "../../../images/logo.png";
 import "./Navbar.css"
 const Menubar = () => {
     return (
-        <Navbar bg="light" expand="lg" >
+        <Navbar  expand="lg" >
             <img src={logo} alt="website-logo" id="logo" className="ml-5" />
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
