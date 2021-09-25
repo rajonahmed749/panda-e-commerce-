@@ -8,7 +8,7 @@ const Admin = () => {
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:4000/allOrders`)
+        fetch("https://dry-retreat-33637.herokuapp.com/allOrders")
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [])

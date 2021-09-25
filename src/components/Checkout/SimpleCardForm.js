@@ -18,7 +18,7 @@ const SimpleCardForm = ({ order }) => {
 
     //order shoe
     const handleOrder = () => {
-        fetch(`http://localhost:4000/addOrder`, {
+        fetch("https://dry-retreat-33637.herokuapp.com/addOrder", {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(selectedShoe)
