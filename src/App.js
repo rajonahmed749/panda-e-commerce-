@@ -12,13 +12,13 @@ import Admin from './components/Admin/Admin';
 import Checkout from './components/Checkout/Checkout';
 import { createContext, useState } from 'react';
 
-export const OrderedShoe = createContext();
+export const OrderContext = createContext();
 
 
 function App() {
   const [order, setOrder] = useState({});
   return (
-    <OrderedShoe.Provider value={[order, setOrder]}>
+    <OrderContext.Provider value={[order, setOrder]}>
       <Router >
         <Menubar />
         <Switch>
@@ -34,7 +34,7 @@ function App() {
         </Switch>
         <Footer />
       </Router>
-    </OrderedShoe.Provider>
+    </OrderContext.Provider>
   );
 }
 

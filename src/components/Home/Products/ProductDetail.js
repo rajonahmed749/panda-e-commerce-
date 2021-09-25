@@ -2,11 +2,11 @@ import React, { useState, useContext } from 'react';
 import './Product.css'
 import { Col } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
-import { OrderedShoe } from "../../../App"
+import { OrderContext } from "../../../App"
 
 
 const ProductDetail = ({ shoe }) => {
-    const [order, setOrder] = useContext(OrderedShoe);
+    const [order, setOrder] = useContext(OrderContext);
 
     const history = useHistory();
     const handleOrder = (id) => {
@@ -19,8 +19,6 @@ const ProductDetail = ({ shoe }) => {
         setOrder(selectedShoe)
         history.push("/checkout");
     }
-
-    console.log(order)
 
     return (
         <Col xs={12} md={4}>

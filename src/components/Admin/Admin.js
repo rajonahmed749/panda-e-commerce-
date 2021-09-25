@@ -3,8 +3,6 @@ import { Container, Row, Col, Table } from 'react-bootstrap';
 
 
 const Admin = () => {
-
-
     const [orders, setOrders] = useState([])
 
     useEffect(() => {
@@ -12,7 +10,7 @@ const Admin = () => {
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [])
-    console.log("orders form db", orders)
+
 
     let count = 1;
     return (

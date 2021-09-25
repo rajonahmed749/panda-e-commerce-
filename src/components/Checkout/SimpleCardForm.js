@@ -7,7 +7,6 @@ import { useHistory, useParams } from 'react-router-dom';
 const SimpleCardForm = ({ order }) => {
     const history = useHistory()
 
-    console.log('from stripe', order)
     const selectedShoe = {
         shoeName: order.shoe,
         price: order.price,
@@ -24,7 +23,6 @@ const SimpleCardForm = ({ order }) => {
             body: JSON.stringify(selectedShoe)
         })
             .then(res => res.json())
-        // history.push('/orders')
     }
     const stripe = useStripe();
     const elements = useElements();
@@ -42,10 +40,8 @@ const SimpleCardForm = ({ order }) => {
         if (error) {
             alert("please try again")
         } else {
-
-            // alert("payment successfully")
             afterSuccess()
-            console.log('[PaymentMethod]', paymentMethod.id);
+            // console.log('[PaymentMethod]', paymentMethod);
         }
     };
 
