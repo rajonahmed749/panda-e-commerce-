@@ -20,8 +20,7 @@ const Checkout = () => {
                     <ListGroupItem> Cost: ${order.price}</ListGroupItem>
                 </ListGroup>
                 <Card.Body>
-                    {/* <Button onClick={handleOrder} variant="warning"> Confirm Order</Button> */}
-                    <Payment order={order}/>
+                    <Payment order={order} />
                 </Card.Body>
             </Card>
         </Container>

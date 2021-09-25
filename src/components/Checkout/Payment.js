@@ -1,12 +1,16 @@
 import React from 'react';
-import { Container, Button } from 'react-bootstrap';
-const Payment = ({order}) => {
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+import SimpleCardForm from './SimpleCardForm';
+
+const stripePromise = loadStripe('pk_test_51JHvdXDp2DJbL4lhSOBGscpqExQzDXRgwcRs5nLWyCnOtl3F0xaURQC1CKmfJOoqjrW2WZGDXVoZERGru5uw3Jeu00xRrAWD56');
+
+const Payment = ({ order }) => {
     console.log("from payment page ", order)
     return (
-        <div>
-            <Button  variant="warning"> Confirm Order</Button>
-            {/* <Button onClick={handleOrder} variant="warning"> Confirm Order</Button> */}
-        </div>
+        <Elements stripe={stripePromise}>
+            <SimpleCardForm order={order} />
+        </Elements>
     );
 };
 
