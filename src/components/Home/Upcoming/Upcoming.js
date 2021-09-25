@@ -25,6 +25,7 @@ const Upcoming = () => {
     ]
     return (
         <Container >
+            <h3 className="mt-5 text-center"><span className="fs-2 border-bottom border-info">Upcoming Products </span></h3>
             <Row className="justify-content-center mt-5 ">
                 {
                     products.map(bag => <UpcomingBag bag={bag}></UpcomingBag>)
